@@ -97,7 +97,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>
-						org.lessons.pizzeria.PizzeriApplication
+						org.lessons.pizzeria.PizzeriaApplication
 					</mainClass>
 				</configuration>
 			</plugin>
