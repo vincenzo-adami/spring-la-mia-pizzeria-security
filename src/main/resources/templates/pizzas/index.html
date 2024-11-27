@@ -107,7 +107,7 @@
                             <i class="fa fa-info"></i>
                           </a>
                         </td>
-                        <td>
+                        <td sec:authorize="hasAuthority('ADMIN')">
                           <a
                             class="btn btn-primary"
                             th:href="@{|pizzas/edit/${pizza.id}|}"
@@ -115,7 +115,7 @@
                             <i class="fa fa-edit"></i>
                           </a>
                         </td>
-                        <td>
+                        <td sec:authorize="hasAuthority('ADMIN')">
                           <form
                             action="#"
                             th:action="@{|pizzas/delete/${pizza.id}|}"
