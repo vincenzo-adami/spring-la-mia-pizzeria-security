@@ -19,7 +19,7 @@ public class SecurityConfiguration {
         .requestMatchers(HttpMethod.POST, "/pizzas/**").hasAuthority("ADMIN")
         .requestMatchers("/ingredients/**").hasAuthority("ADMIN")
         .requestMatchers(HttpMethod.POST, "/ingredients/**").hasAuthority("ADMIN")
-        .requestMatchers("/specialOffers", "/specialOffers/**").hasAuthority("ADMIN")
+        .requestMatchers("/pizzas/{id}/specialOffers", "/specialOffers/edit/**").hasAuthority("ADMIN")
         .requestMatchers("/pizzas", "/pizzas/**").hasAnyAuthority("USER", "ADMIN")
         .requestMatchers("/**").permitAll()
         .and().formLogin().and().logout().and().exceptionHandling();
